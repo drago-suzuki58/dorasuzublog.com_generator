@@ -6,10 +6,18 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "repo:clone": "node tools/repo-sync.js clone",
+    "repo:pull": "node tools/repo-sync.js pull",
+    "repo:sync": "node tools/repo-sync.js sync"
   },
   "hexo": {
     "version": "8.0.0"
+  },
+  "config": {
+    "contentRepo": "https://github.com/drago-suzuki58/dorasuzublog.com",
+    "contentBranch": "main",
+    "contentDir": "source"
   },
   "dependencies": {
     "hexo": "^8.0.0",
