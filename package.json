@@ -7,9 +7,12 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "repo:clone": "node tools/repo-sync.js clone",
-    "repo:pull": "node tools/repo-sync.js pull",
-    "repo:sync": "node tools/repo-sync.js sync"
+    "content:clone": "node tools/content-sync.js clone",
+    "content:pull": "node tools/content-sync.js pull",
+    "content:sync": "node tools/content-sync.js sync",
+    "theme:clone": "node tools/theme-sync.js clone",
+    "theme:pull": "node tools/theme-sync.js pull",
+    "theme:sync": "node tools/theme-sync.js sync"
   },
   "hexo": {
     "version": "8.0.0"
@@ -17,7 +20,10 @@
   "config": {
     "contentRepo": "https://github.com/drago-suzuki58/dorasuzublog.com",
     "contentBranch": "main",
-    "contentDir": "source"
+    "contentDir": "source",
+    "themeRepo": "https://github.com/drago-suzuki58/VSC4T",
+    "themeBranch": "main",
+    "themeDir": "themes/VSC4T"
   },
   "dependencies": {
     "hexo": "^8.0.0",
@@ -25,6 +31,7 @@
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-migrator-wordpress": "^2.1.2",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
