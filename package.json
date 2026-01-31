@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo generate && node tools/minify-html.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
@@ -15,7 +15,7 @@
     "theme:sync": "node tools/theme-sync.js sync"
   },
   "hexo": {
-    "version": "8.0.0"
+    "version": "8.1.1"
   },
   "config": {
     "contentRepo": "https://github.com/drago-suzuki58/dorasuzublog.com",
@@ -23,10 +23,13 @@
     "contentDir": "source",
     "themeRepo": "https://github.com/drago-suzuki58/VSC4T",
     "themeBranch": "main",
-    "themeDir": "themes/VSC4T"
+    "themeDir": "themes/VSC4T",
+    "htmlEasterEggFile": "egg.txt"
   },
   "dependencies": {
+    "glob": "^11.1.0",
     "hexo": "^8.1.1",
+    "hexo-clean-css": "^2.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
@@ -36,6 +39,8 @@
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "hexo-uglify": "^2.0.0",
+    "html-minifier-terser": "^7.2.0"
   }
 }

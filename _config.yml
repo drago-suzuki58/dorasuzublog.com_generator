@@ -106,3 +106,13 @@ theme: VSC4T
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ""
+
+# Plugins
+clean_css:
+  exclude:
+    - '*.min.css'
+
+uglify:
+  exclude:
+    - "*.min.js"
+  mangle: true
