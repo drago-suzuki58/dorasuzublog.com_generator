@@ -116,3 +116,13 @@ uglify:
   exclude:
     - "*.min.js"
   mangle: true
+
+sitemap:
+  path:
+    - sitemap.xml
+    - llms.txt
+  template: ./templates/sitemap_template.xml
+  template_txt: ./templates/llms_template.txt
+  rel: false
+  tags: true
+  categories: true

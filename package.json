@@ -24,7 +24,7 @@
     "themeRepo": "https://github.com/drago-suzuki58/VSC4T",
     "themeBranch": "main",
     "themeDir": "themes/VSC4T",
-    "htmlEasterEggFile": "egg.txt"
+    "htmlEasterEggFile": "tools/assets/egg.txt"
   },
   "dependencies": {
     "glob": "^11.1.0",
@@ -33,6 +33,7 @@
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
+    "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-migrator-wordpress": "^2.1.2",
     "hexo-renderer-ejs": "^2.0.0",
