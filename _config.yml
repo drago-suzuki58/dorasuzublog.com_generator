@@ -8,13 +8,13 @@ subtitle: ""
 description: ""
 keywords:
 author: drago-suzuki58
-language: ja-JP
+language: ja
 timezone: "Asia/Tokyo"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://dorasuzublog.com
-permalink: :category/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -41,15 +41,15 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
-relative_link: false
+relative_link: true
 future: true
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
-  auto_detect: false
-  tab_replace: ""
+  auto_detect: true
+  tab_replace: "  "
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
   preprocess: true
   line_number: true
@@ -92,6 +92,9 @@ pagination_dir: page
 include: []
 exclude:
   - LICENSE
+  - .gitignore
+  - _private/*
+  - _drafts/*
 ignore: []
 
 # Extensions

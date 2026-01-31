@@ -1,0 +1,71 @@
+style:
+  colorscheme: "dark"
+  theme_color: "#1e1e1e"
+  link_color: "#569cd6"
+  accent_color: "#608b4e"
+  font_family: "JetBrains Mono, Consolas, Monaco, monospace"
+  background_color: "#252526"
+  text_color: "#d4d4d4"
+
+auto_theme_switch:
+  enabled: false
+  light_start: "06:00"
+  light_end: "18:00"
+
+sidebar:
+  enabled: true
+  position: left
+  mobile:
+    enabled: false
+    hamburger: true
+
+mobile:
+  enabled: true
+  breakpoint: 768
+  scale_fix: true
+  nav_style: "drawer"
+  font_size_adjust: 0.9
+  content_width: 100%
+  hide_elements: ["sidebar-toc"]
+  custom_style: true
+  touch_optimization: true
+  code_optimization: true
+
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace: "  "
+  wrap: true
+  hljs: true
+
+prismjs:
+  enable: true
+
+code_block:
+  copy_button: true
+  line_number: true
+  max_height: 500
+  custom_font: true
+
+index_posts: 10
+
+mathjax: true
+
+github: https://github.com/drago-suzuki58
+
+comments:
+  provider: false
+
+favicon:
+  ico: /favicon.ico
+  small: /favicon-16x16.png
+  medium: /favicon-32x32.png
+  large: /favicon-192x192.png
+  apple_touch_icon: /apple-touch-icon.png
+
+custom_css:
+  - /css/mobile.css
+custom_js:
+  - /js/code-copy.js
+  - /js/code-enhance.js
