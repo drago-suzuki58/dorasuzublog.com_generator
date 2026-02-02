@@ -27,7 +27,7 @@
     "htmlEasterEggFile": "tools/assets/egg.txt"
   },
   "dependencies": {
-    "glob": "^11.1.0",
+    "glob": "^13.0.0",
     "hexo": "^8.1.1",
     "hexo-clean-css": "^2.0.0",
     "hexo-generator-archive": "^2.0.0",
