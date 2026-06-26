@@ -60,6 +60,24 @@ github: https://github.com/drago-suzuki58/dorasuzublog.com
 comments:
   provider: false
 
+fixed_pages:
+  - title: プロフィール
+    path: /profile/
+    icon: fas fa-user
+    header: true
+  - title: お問い合わせ
+    path: /contact/
+    icon: fas fa-envelope
+  - title: プライバシーポリシー
+    path: /privacy-policy/
+    icon: fas fa-shield-alt
+  - title: 免責事項
+    path: /disclaimer/
+    icon: fas fa-exclamation-triangle
+  - title: ライセンス
+    path: /license/
+    icon: fas fa-balance-scale
+
 favicon:
   ico: /favicon.ico
   small: /favicon-16x16.png
