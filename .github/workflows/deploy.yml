@@ -70,4 +70,3 @@ jobs:
           protocol: ftp
           local-dir: ./public/
           server-dir: ./
-          dangerous-clean-slate: true
