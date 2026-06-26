@@ -47,6 +47,14 @@ mathjax: true
 analytics:
   google_measurement_id: G-PCW8DNWS2Y
 
+seo:
+  default_description: "ゲーム、プログラミングの個人ブログ"
+  default_image: /images/og/default.png
+  default_image_width: 1200
+  default_image_height: 630
+  twitter_card: summary_large_image
+  twitter_site:
+
 github: https://github.com/drago-suzuki58/dorasuzublog.com
 
 comments:
