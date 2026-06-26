@@ -8,7 +8,7 @@ const REPO = process.env.CONTENT_REPO_URL || pkg.config?.themeRepo;
 const BRANCH =
   process.env.CONTENT_REPO_BRANCH || pkg.config?.themeBranch || "main";
 const DIR =
-  process.env.CONTENT_REPO_DIR || pkg.config?.themeDir || "theme/VSC4T";
+  process.env.CONTENT_REPO_DIR || pkg.config?.themeDir || "themes/VSC4T";
 
 const GIT_DIR = path.join(DIR, ".git");
 
