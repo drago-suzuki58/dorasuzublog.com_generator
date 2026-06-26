@@ -4,11 +4,11 @@ const path = require("path");
 
 const pkg = require("../package.json");
 
-const REPO = process.env.CONTENT_REPO_URL || pkg.config?.themeRepo;
+const REPO = process.env.THEME_REPO_URL || pkg.config?.themeRepo;
 const BRANCH =
-  process.env.CONTENT_REPO_BRANCH || pkg.config?.themeBranch || "main";
+  process.env.THEME_REPO_BRANCH || pkg.config?.themeBranch || "customized";
 const DIR =
-  process.env.CONTENT_REPO_DIR || pkg.config?.themeDir || "themes/VSC4T";
+  process.env.THEME_REPO_DIR || pkg.config?.themeDir || "themes/VSC4T";
 
 const GIT_DIR = path.join(DIR, ".git");
 
@@ -32,6 +32,7 @@ function clone() {
       process.exit(1);
     }
   }
+  fs.mkdirSync(path.dirname(DIR), { recursive: true });
   console.log(`Cloning ${REPO} (branch: ${BRANCH}) into ${DIR} ...`);
   run(`git clone --branch ${BRANCH} ${REPO} ${quote(DIR)}`);
 }

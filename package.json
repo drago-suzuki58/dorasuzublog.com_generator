@@ -26,7 +26,7 @@
     "contentBranch": "main",
     "contentDir": "source",
     "themeRepo": "https://github.com/drago-suzuki58/VSC4T",
-    "themeBranch": "main",
+    "themeBranch": "customized",
     "themeDir": "themes/VSC4T",
     "htmlEasterEggFile": "tools/assets/egg.txt"
   },
