@@ -1,0 +1,70 @@
+[
+  {
+    "from": "/sitemaps.xml",
+    "to": "/sitemap.xml"
+  },
+  {
+    "from": "/sitemaps-misc.xml",
+    "to": "/sitemap.xml"
+  },
+  {
+    "from": "/category-sitemap.xml",
+    "to": "/sitemap.xml"
+  },
+  {
+    "from": "/post-sitemap.xml",
+    "to": "/sitemap.xml"
+  },
+  {
+    "from": "/page-sitemap.xml",
+    "to": "/sitemap.xml"
+  },
+  {
+    "from": "/game/minecraft-mod/02/dragon4/",
+    "to": "/games/minecraft/dragon4/"
+  },
+  {
+    "from": "/game/minecraft-mod/02/stacker/",
+    "to": "/games/minecraft/stacker/"
+  },
+  {
+    "from": "/game/minecraft-mod/03/mod-introduction/",
+    "to": "/games/minecraft/mod-introduction/"
+  },
+  {
+    "from": "/game/minecraft-mod/05/industry-5/",
+    "to": "/games/minecraft/industry-5/"
+  },
+  {
+    "from": "/game/12/for-first-steam-portal/",
+    "to": "/games/for-first-steam-portal/"
+  },
+  {
+    "from": "/game/12/aperture-science-philosophy/",
+    "to": "/games/aperture-science-philosophy/"
+  },
+  {
+    "from": "/programming/07/renpy-debug-ui/",
+    "to": "/programming/renpy-debug-ui/"
+  },
+  {
+    "from": "/category/game/",
+    "to": "/categories/games/"
+  },
+  {
+    "from": "/category/programming/",
+    "to": "/categories/programming/"
+  },
+  {
+    "from": "/category/game/minecraft-mod/",
+    "to": "/categories/games-minecraft/"
+  },
+  {
+    "from": "/minecraft-mod/02/mcmod-dragon4/",
+    "to": "/games/minecraft/dragon4/"
+  },
+  {
+    "from": "/MOD-introduction/",
+    "to": "/games/minecraft/mod-introduction/"
+  }
+]

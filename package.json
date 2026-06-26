@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate && node tools/minify-html.js",
+    "build": "node tools/generate-htaccess.js && hexo generate && node tools/minify-html.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
@@ -12,6 +12,8 @@
     "content:sync": "node tools/content-sync.js sync",
     "images:migrate": "node tools/migrate-images.js",
     "images:migrate:check": "node tools/migrate-images.js --check",
+    "redirects:generate": "node tools/generate-htaccess.js",
+    "redirects:check": "node tools/generate-htaccess.js --check",
     "theme:clone": "node tools/theme-sync.js clone",
     "theme:pull": "node tools/theme-sync.js pull",
     "theme:sync": "node tools/theme-sync.js sync"
