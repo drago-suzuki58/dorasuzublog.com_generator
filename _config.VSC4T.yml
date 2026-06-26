@@ -44,6 +44,9 @@ index_posts: 10
 
 mathjax: true
 
+analytics:
+  google_measurement_id: G-PCW8DNWS2Y
+
 github: https://github.com/drago-suzuki58/dorasuzublog.com
 
 comments:
