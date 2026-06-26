@@ -44,6 +44,11 @@ jobs:
       - name: Sync theme
         run: npm run theme:sync
 
+      - name: Verify theme
+        run: |
+          test -d themes/VSC4T/layout
+          test "$(git -C themes/VSC4T branch --show-current)" = "customized"
+
       - name: Generate redirects
         run: npm run redirects:generate
 
