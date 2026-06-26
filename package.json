@@ -10,6 +10,8 @@
     "content:clone": "node tools/content-sync.js clone",
     "content:pull": "node tools/content-sync.js pull",
     "content:sync": "node tools/content-sync.js sync",
+    "images:migrate": "node tools/migrate-images.js",
+    "images:migrate:check": "node tools/migrate-images.js --check",
     "theme:clone": "node tools/theme-sync.js clone",
     "theme:pull": "node tools/theme-sync.js pull",
     "theme:sync": "node tools/theme-sync.js sync"
