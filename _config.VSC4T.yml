@@ -60,6 +60,10 @@ github: https://github.com/drago-suzuki58/dorasuzublog.com
 comments:
   provider: false
 
+likes:
+  enabled: true
+  api_base_url: https://api.dorasuzublog.com
+
 fixed_pages:
   - title: プロフィール
     path: /profile/
