@@ -94,9 +94,11 @@ include:
 exclude:
   - LICENSE
   - .gitignore
+  - README.md
   - _private/*
   - _drafts/*
-ignore: []
+ignore:
+  - source/README.md
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
