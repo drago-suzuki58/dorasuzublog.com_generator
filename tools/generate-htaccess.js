@@ -62,13 +62,11 @@ function renderHtaccess(redirects) {
     'RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]',
     '',
     'RewriteRule ^404/?$ - [R=404,L]',
-    'RewriteRule ^403/?$ - [R=403,L]',
-    'RewriteRule ^418/?$ - [R=418,L]',
+    'RewriteRule ^403/?$ - [F,L]',
     '</IfModule>',
     '',
     'ErrorDocument 404 /404/index.html',
     'ErrorDocument 403 /403/index.html',
-    'ErrorDocument 418 /418/index.html',
     ''
   ];
 
