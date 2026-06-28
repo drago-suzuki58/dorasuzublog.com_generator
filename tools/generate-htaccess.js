@@ -7,6 +7,52 @@ const REDIRECTS_FILE = path.resolve(__dirname, 'redirects.json');
 const OUTPUT_FILE = path.resolve(__dirname, '..', 'source', '.htaccess');
 const CHECK_ONLY = process.argv.includes('--check');
 
+const TEAPOT_REDIRECT_RULES = [
+  String.raw`^wp-login\.php$`,
+  String.raw`^wp-admin/?$`,
+  String.raw`^wp-admin/.*$`,
+  String.raw`^xmlrpc\.php$`,
+  String.raw`^wp-config\.php(?:\.(?:bak|backup|old|orig|save|swp|txt))?$`,
+  String.raw`^wp-config-sample\.php$`,
+  String.raw`^wp-json/wp/v2/users/?$`,
+  String.raw`^wp-content/debug\.log$`,
+  String.raw`^(?:wordpress|wp)/wp-login\.php$`,
+  String.raw`^(?:wordpress|wp)/wp-admin(?:/.*)?$`,
+  String.raw`^(?:wordpress|wp)/xmlrpc\.php$`,
+  String.raw`^(?:phpmyadmin|phpMyAdmin|pma|myadmin|mysqladmin|dbadmin)(?:/.*)?$`,
+  String.raw`^adminer(?:\.php|/.*)?$`,
+  String.raw`^\.env(?:\.(?:local|production|development|bak|backup|save|old))?$`,
+  String.raw`^\.git(?:/.*)?$`,
+  String.raw`^\.svn(?:/.*)?$`,
+  String.raw`^\.hg(?:/.*)?$`,
+  String.raw`^\.DS_Store$`,
+  String.raw`^\.aws/credentials$`,
+  String.raw`^\.ssh/(?:id_rsa|config)$`,
+  String.raw`^id_rsa$`,
+  String.raw`^sftp-config\.json$`,
+  String.raw`^ftp-config\.json$`,
+  String.raw`^secrets?(?:\.(?:json|ya?ml|txt|env))?$`,
+  String.raw`^config(?:\.(?:json|php|ini|ya?ml))?$`,
+  String.raw`^(?:backup|backups|dump|db|database|site|www|public_html)(?:[-_.][A-Za-z0-9]+)?\.(?:zip|tar|tar\.gz|tgz|sql|gz|7z|rar)$`,
+  String.raw`^composer\.(?:json|lock)$`,
+  String.raw`^vendor/(?:autoload\.php|phpunit/phpunit/src/Util/PHP/eval-stdin\.php)$`,
+  String.raw`^phpunit\.xml(?:\.dist)?$`,
+  String.raw`^\.phpunit\.result\.cache$`,
+  String.raw`^storage/logs/laravel\.log$`,
+  String.raw`^artisan$`,
+  String.raw`^actuator(?:/.*)?$`,
+  String.raw`^(?:env|server-status|server-info)(?:/.*)?$`,
+  String.raw`^(?:admin|administrator|manager|cpanel|webmail|owa)(?:/.*)?$`,
+  String.raw`^administrator/index\.php$`,
+  String.raw`^core/install\.php$`,
+  String.raw`^(?:install|setup|phpinfo|info|login)\.php$`,
+  String.raw`^(?:shell|cmd|wso|c99|r57|b374k|mini|eval-stdin|debug|test)\.php$`,
+  String.raw`^\.github(?:/.*)?$`,
+  String.raw`^\.gitlab-ci\.ya?ml$`,
+  String.raw`^docker-compose\.ya?ml$`,
+  String.raw`^Dockerfile$`
+];
+
 function normalizePath(value, fieldName) {
   if (typeof value !== 'string' || value.length === 0) {
     throw new Error(`${fieldName} must be a non-empty string`);
@@ -61,6 +107,9 @@ function renderHtaccess(redirects) {
     'RewriteCond %{HTTPS} !=on',
     'RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]',
     '',
+    '# Send common scanner/probe URLs to the teapot page.',
+    ...TEAPOT_REDIRECT_RULES.map(rule => `RewriteRule ${rule} /418/ [R=302,L,NC]`),
+    '',
     'RewriteRule ^404/?$ - [R=404,L]',
     'RewriteRule ^403/?$ - [F,L]',
     '</IfModule>',
@@ -94,7 +143,7 @@ function main() {
   }
 
   fs.writeFileSync(OUTPUT_FILE, htaccess, 'utf8');
-  console.log(`Generated redirects: ${redirects.length}`);
+  console.log(`Generated redirects: ${redirects.length}, teapot redirects: ${TEAPOT_REDIRECT_RULES.length}`);
 }
 
 main();
